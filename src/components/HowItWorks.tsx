@@ -71,7 +71,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Animation */}
-        <div className="relative flex items-center justify-center gap-6 sm:gap-12 mb-16 py-8">
+        <div className="relative flex items-center justify-center gap-6 sm:gap-12 py-8">
 
           {/* Apple Watch */}
           <div className="flex flex-col items-center gap-3 shrink-0">
@@ -179,20 +179,6 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        {/* Step indicators */}
-        <div className="flex justify-center gap-2">
-          {[0, 1, 2].map((i) => (
-            <button
-              key={i}
-              onClick={() => setPhase(i)}
-              className="w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
-              style={{
-                backgroundColor: phase === i ? '#6C5CE7' : '#222236',
-                transform: phase === i ? 'scale(1.3)' : 'scale(1)',
-              }}
-            />
-          ))}
-        </div>
       </div>
 
       <style>{`
