@@ -16,6 +16,12 @@ export default function Footer() {
             Support
           </a>
           <a
+            href="/privacy/"
+            className="hover:text-text-secondary transition-colors"
+          >
+            Privacy
+          </a>
+          <a
             href={GITHUB_URL}
             className="hover:text-text-secondary transition-colors"
             target="_blank"
