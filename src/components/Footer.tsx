@@ -1,3 +1,5 @@
+import { GITHUB_URL } from '../config'
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-10 px-6">
@@ -8,7 +10,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6 text-sm text-text-muted">
           <a
-            href="https://github.com/aleks-dolotin/wristvox-releases"
+            href={GITHUB_URL}
             className="hover:text-text-secondary transition-colors"
             target="_blank"
             rel="noopener noreferrer"

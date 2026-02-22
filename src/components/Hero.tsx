@@ -1,3 +1,5 @@
+import { DOWNLOAD_URL } from '../config'
+
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen px-6 overflow-hidden">
@@ -27,7 +29,7 @@ export default function Hero() {
         {/* CTA */}
         <div className="animate-fade-up animate-delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="https://github.com/aleks-dolotin/wristvox-releases/releases/download/v0.9.1/WristVox-Mac-0.9.1.dmg"
+            href={DOWNLOAD_URL}
             className="group inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-semibold rounded-2xl transition-all duration-300 glow-accent hover:scale-[1.02]"
           >
             <DownloadIcon />

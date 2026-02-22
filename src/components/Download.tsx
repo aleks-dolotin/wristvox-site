@@ -1,3 +1,5 @@
+import { DOWNLOAD_URL } from '../config'
+
 export default function Download() {
   return (
     <section className="relative py-32 px-6">
@@ -10,7 +12,7 @@ export default function Download() {
         </h2>
 
         <a
-          href="https://github.com/aleks-dolotin/wristvox-releases/releases/download/v0.9.1/WristVox-Mac-0.9.1.dmg"
+          href={DOWNLOAD_URL}
           className="group inline-flex items-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover text-white font-semibold text-lg rounded-2xl transition-all duration-300 glow-accent hover:scale-[1.02]"
         >
           <svg className="w-6 h-6 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
