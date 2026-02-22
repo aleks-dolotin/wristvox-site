@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* WristVox Brand Tokens */
+@theme {
+  --color-accent: #6C5CE7;
+  --color-accent-hover: #7C6FF0;
+  --color-accent-glow: rgba(108, 92, 231, 0.3);
+  --color-bg: #08080D;
+  --color-surface: #12121C;
+  --color-surface-hover: #1A1A28;
+  --color-border: #222236;
+  --color-text-primary: #F5F5F7;
+  --color-text-secondary: #8E8E93;
+  --color-text-muted: #5A5A6E;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Glow effect for accent elements */
+.glow-accent {
+  box-shadow: 0 0 40px var(--color-accent-glow), 0 0 80px rgba(108, 92, 231, 0.1);
+}
+
+/* Fade-in animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+.animate-delay-6 { animation-delay: 0.6s; }
