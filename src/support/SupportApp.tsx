@@ -27,8 +27,9 @@ const faqItems: FaqItem[] = [
   {
     question: 'Dictation doesn\'t start when I tap the button.',
     answer:
-      'WristVox uses the system Dictation feature. Make sure it\'s enabled: ' +
-      'System Settings → Keyboard → Dictation → toggle On. ' +
+      'WristVox activates dictation by simulating a double-tap of the Fn key (Fn×2), which is the standard macOS shortcut. ' +
+      'Make sure Dictation is enabled: System Settings → Keyboard → Dictation → toggle On. ' +
+      'Also verify that Accessibility permission is granted for WristVox — without it, the app cannot send keystrokes. ' +
       'If you see a prompt asking to enable Dictation, click "Enable" and try again.',
   },
   {
@@ -51,6 +52,50 @@ const faqItems: FaqItem[] = [
       'No. WristVox has no servers, no accounts, no analytics, and no tracking. ' +
       'Everything works over a direct Bluetooth connection between your Watch and your Mac. ' +
       'Nothing ever leaves your devices.',
+  },
+]
+
+// ─── Getting Started ────────────────────────────────────────
+
+interface SetupStep {
+  step: number
+  title: string
+  description: string
+  icon: string
+}
+
+const setupSteps: SetupStep[] = [
+  {
+    step: 1,
+    title: 'Install WristVox on your Mac',
+    description:
+      'Download WristVox for Mac from wristvox.app and drag it to your Applications folder. ' +
+      'Launch the app — it lives in your menu bar.',
+    icon: 'M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25',
+  },
+  {
+    step: 2,
+    title: 'Grant permissions',
+    description:
+      'WristVox needs two permissions: Accessibility (to send keystrokes like Fn key double-tap ' +
+      'for dictation) and Dictation enabled in System Settings. The onboarding wizard will guide you through both.',
+    icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z',
+  },
+  {
+    step: 3,
+    title: 'Install WristVox on your Apple Watch',
+    description:
+      'Get WristVox from the App Store on your iPhone — the Watch app installs automatically. ' +
+      'Open it on your Watch and it will find your Mac via Bluetooth.',
+    icon: 'M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+  {
+    step: 4,
+    title: 'Tap and dictate',
+    description:
+      'Tap Dictate on your Watch — your Mac starts listening. Speak, then tap Send to insert the text. ' +
+      'Works up to 10 meters away, across all keyboard layouts.',
+    icon: 'M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z',
   },
 ]
 
@@ -118,6 +163,22 @@ function FaqAccordion({ item }: { item: FaqItem }) {
   )
 }
 
+function SetupStepCard({ step }: { step: SetupStep }) {
+  return (
+    <div className="flex gap-5 p-6 rounded-2xl border border-border bg-surface/40 backdrop-blur-sm">
+      <div className="flex flex-col items-center shrink-0">
+        <div className="w-10 h-10 rounded-xl bg-accent/15 text-accent flex items-center justify-center font-bold text-lg">
+          {step.step}
+        </div>
+      </div>
+      <div>
+        <h3 className="font-medium text-text-primary mb-1.5">{step.title}</h3>
+        <p className="text-sm text-text-secondary leading-relaxed">{step.description}</p>
+      </div>
+    </div>
+  )
+}
+
 function KnownIssueCard({ issue }: { issue: KnownIssue }) {
   const status = statusLabels[issue.status]
   return (
@@ -160,6 +221,21 @@ export default function SupportApp() {
           <p className="text-lg text-text-secondary max-w-xl mx-auto leading-relaxed">
             Find answers below or reach out — we're happy to help.
           </p>
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="px-6 pb-20">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold tracking-tight mb-3">Getting Started</h2>
+          <p className="text-text-secondary mb-8">
+            Set up WristVox in under 2 minutes.
+          </p>
+          <div className="flex flex-col gap-4">
+            {setupSteps.map((step) => (
+              <SetupStepCard key={step.step} step={step} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -223,7 +299,7 @@ export default function SupportApp() {
           <a href="/" className="text-accent font-bold text-lg hover:opacity-80 transition-opacity">
             WristVox
           </a>
-          <span className="text-sm text-text-muted">© 2025 WristVox</span>
+          <span className="text-sm text-text-muted">© 2026 WristVox</span>
         </div>
       </footer>
     </div>
