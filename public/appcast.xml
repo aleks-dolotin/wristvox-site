@@ -5,23 +5,18 @@
         <description>Most recent updates for WristVox Mac</description>
         <language>en</language>
         <item>
-            <title>Version 0.9.3</title>
+            <title>Version 0.9.4</title>
             <description><![CDATA[
-                <h2>What's New in 0.9.3</h2>
-                <ul>
-                    <li>Sparkle auto-update with EdDSA signature verification</li>
-                    <li>Centralized version management (VERSION file)</li>
-                    <li>Updated app icon</li>
-                </ul>
+                <h2>What's New in 0.9.4</h2>
             ]]></description>
-            <pubDate>Sat, 22 Feb 2026 21:30:00 +0000</pubDate>
+            <pubDate>Mon, 23 Feb 2026 02:51:40 +0000</pubDate>
             <enclosure
-                url="https://github.com/aleks-dolotin/wristvox-releases/releases/download/v0.9.3/WristVox-Mac-0.9.3.dmg"
-                sparkle:version="3"
-                sparkle:shortVersionString="0.9.3"
-                length="3633693"
+                url="https://github.com/aleks-dolotin/wristvox-releases/releases/download/v0.9.4/WristVox-Mac-0.9.4.dmg"
+                sparkle:version="2"
+                sparkle:shortVersionString="0.9.4"
+                length="3633750"
                 type="application/octet-stream"
-                sparkle:edSignature="lHSODdb744BhuxUb4h4Es0xdqayOeoUfbgxhCzigL3cnHxdVnszpOvrZz4kTeCsI1vqdOdZm/PxPkiLdng2BDw=="
+                sparkle:edSignature="mC/4KAck7I5JiYd3IqIzo8MILrVcURdoVfl/mtMVdJPttNJKBw9fmTXO7A8RYTmmiQRaz0/LnJxcBVviJCyrDQ=="
             />
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
         </item>
