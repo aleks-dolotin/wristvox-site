@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && zsh scripts/copy-locales.sh",
+    "build": "tsc -b && vite build && sh scripts/copy-locales.sh",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
   },
