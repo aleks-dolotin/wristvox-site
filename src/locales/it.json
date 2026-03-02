@@ -11,7 +11,7 @@
   "how.watch": "Tocca",
   "how.mac": "Fatto",
   "cmd.title": "Tastiera, mouse e altro",
-  "cmd.sub": "13 comandi dal polso — tasti, scorrimento e controllo del mouse. Ogni comando è un singolo byte via Bluetooth. Istantaneo. Affidabile.",
+  "cmd.sub": "17 comandi dal polso — tasti, punteggiatura, scorrimento e controllo del mouse. Ogni comando è un singolo byte via Bluetooth. Istantaneo. Affidabile.",
   "cmd.dictate": "Dettatura",
   "cmd.dictate.desc": "Avvia e ferma la dettatura vocale",
   "cmd.send": "Invia",

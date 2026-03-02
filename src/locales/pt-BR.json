@@ -11,7 +11,7 @@
   "how.watch": "Toque",
   "how.mac": "Pronto",
   "cmd.title": "Teclado, mouse e mais",
-  "cmd.sub": "13 comandos do seu pulso — teclas, rolagem e controle do mouse. Cada comando é um único byte via Bluetooth. Instantâneo. Confiável.",
+  "cmd.sub": "17 comandos do seu pulso — teclas, pontuação, rolagem e controle do mouse. Cada comando é um único byte via Bluetooth. Instantâneo. Confiável.",
   "cmd.dictate": "Ditar",
   "cmd.dictate.desc": "Iniciar e parar o ditado por voz",
   "cmd.send": "Enviar",
