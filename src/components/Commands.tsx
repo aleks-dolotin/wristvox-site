@@ -38,7 +38,6 @@ const moreCommands = [
   { name: 'Delete Word', icon: '⌫' },
   { name: 'Lock Screen', icon: '🔒' },
   { name: 'Save', icon: '💾' },
-  { name: 'Mute Mic', icon: '🎤' },
   { name: 'Play / Pause', icon: '⏯' },
   { name: 'App Switch', icon: '⌘⇥' },
   { name: 'Open Browser', icon: '🌍' },
@@ -58,7 +57,7 @@ export default function Commands() {
             Keyboard, mouse, and more
           </h2>
           <p className="text-text-secondary text-lg max-w-lg mx-auto">
-            14 commands from your wrist — keystrokes, scroll, and even mouse control.
+            13 commands from your wrist — keystrokes, scroll, and even mouse control.
             Every command is a single byte over Bluetooth. Instant. Reliable.
           </p>
         </div>
