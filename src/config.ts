@@ -7,7 +7,7 @@
 // For local dev, fallback to DEFAULT_VERSION
 // ============================================
 
-const DEFAULT_VERSION = '0.9.1'
+const DEFAULT_VERSION = '1.0.1'
 
 export const APP_VERSION = import.meta.env.VITE_APP_VERSION || DEFAULT_VERSION
 export const APP_TAG = `v${APP_VERSION}`

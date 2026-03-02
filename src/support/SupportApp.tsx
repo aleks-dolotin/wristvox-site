@@ -83,18 +83,19 @@ const setupSteps: SetupStep[] = [
   },
   {
     step: 3,
-    title: 'Install WristVox on your Apple Watch',
+    title: 'Get WristVox on your Apple Watch or iPhone',
     description:
-      'Get WristVox from the App Store on your iPhone — the Watch app installs automatically. ' +
-      'Open it on your Watch and it will find your Mac via Bluetooth.',
+      'Download WristVox from the App Store on your iPhone — the Watch app installs automatically. ' +
+      'Both iPhone and Watch work as remotes.',
     icon: 'M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z',
   },
   {
     step: 4,
-    title: 'Tap and dictate',
+    title: 'Pair with a code and start dictating',
     description:
-      'Tap Dictate on your Watch — your Mac starts listening. Speak, then tap Send to insert the text. ' +
-      'Works up to 10 meters away, across all keyboard layouts.',
+      'Open WristVox on your Watch or iPhone — it will find your Mac via Bluetooth. ' +
+      'Confirm the 4-digit pairing code shown on your Mac, and you\'re connected. ' +
+      'Tap Dictate — your Mac starts listening. Speak, then tap Send.',
     icon: 'M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z',
   },
 ]

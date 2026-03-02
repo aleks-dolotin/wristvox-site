@@ -1,4 +1,4 @@
-const commands = [
+const coreCommands = [
   {
     name: 'Dictate',
     description: 'Start and stop voice dictation',
@@ -11,7 +11,7 @@ const commands = [
   },
   {
     name: 'Send',
-    description: 'Press Enter',
+    description: 'Press Enter to send your text',
     shortcut: '↵ Return',
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -31,6 +31,21 @@ const commands = [
   },
 ]
 
+const moreCommands = [
+  { name: 'Switch Language', icon: '🌐' },
+  { name: 'Undo', icon: '↩' },
+  { name: 'Stop Dictation', icon: '⏹' },
+  { name: 'Delete Word', icon: '⌫' },
+  { name: 'Lock Screen', icon: '🔒' },
+  { name: 'Save', icon: '💾' },
+  { name: 'Mute Mic', icon: '🎤' },
+  { name: 'Play / Pause', icon: '⏯' },
+  { name: 'App Switch', icon: '⌘⇥' },
+  { name: 'Open Browser', icon: '🌍' },
+  { name: 'Scroll & Pan', icon: '↕️' },
+  { name: 'Mouse Control', icon: '🖱️' },
+]
+
 export default function Commands() {
   return (
     <section className="relative py-32 px-6">
@@ -40,15 +55,17 @@ export default function Commands() {
       <div className="relative max-w-5xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            Three commands. That's all you need.
+            Keyboard, mouse, and more
           </h2>
           <p className="text-text-secondary text-lg max-w-lg mx-auto">
+            14 commands from your wrist — keystrokes, scroll, and even mouse control.
             Every command is a single byte over Bluetooth. Instant. Reliable.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {commands.map((cmd) => (
+        {/* Core 3 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {coreCommands.map((cmd) => (
             <div
               key={cmd.name}
               className="group relative p-8 rounded-2xl border border-border bg-surface/40 backdrop-blur-sm hover:border-accent/40 transition-all duration-500 text-center"
@@ -67,6 +84,22 @@ export default function Commands() {
                 {cmd.shortcut}
               </span>
             </div>
+          ))}
+        </div>
+
+        {/* More commands */}
+        <div className="text-center mb-6">
+          <p className="text-text-muted text-sm uppercase tracking-widest">And more</p>
+        </div>
+        <div className="flex flex-wrap justify-center gap-3">
+          {moreCommands.map((cmd) => (
+            <span
+              key={cmd.name}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-border bg-surface/30 text-sm text-text-secondary hover:border-accent/30 transition-colors duration-300"
+            >
+              <span>{cmd.icon}</span>
+              {cmd.name}
+            </span>
           ))}
         </div>
       </div>

@@ -29,7 +29,7 @@ export default function Footer() {
           >
             GitHub
           </a>
-          <span>© 2025 WristVox</span>
+          <span>© 2026 WristVox</span>
         </div>
       </div>
     </footer>

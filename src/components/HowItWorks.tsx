@@ -66,7 +66,7 @@ export default function HowItWorks() {
             How it works
           </h2>
           <p className="text-text-secondary text-lg max-w-md mx-auto">
-            Three steps. No setup. No pairing codes.
+            Tap on your Watch or iPhone — your Mac does the rest.
           </p>
         </div>
 
