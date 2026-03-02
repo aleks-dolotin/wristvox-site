@@ -1,41 +1,36 @@
 import { DOWNLOAD_URL } from '../config'
+import { t } from '../i18n'
 
 const APP_STORE_URL = 'https://apps.apple.com/app/wristvox/id6759512143'
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen px-6 overflow-hidden">
-      {/* Background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/8 blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto text-center">
-        {/* Badge */}
         <div className="animate-fade-up animate-delay-1 inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-border bg-surface/60 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-green-400" />
-          <span className="text-sm text-text-secondary tracking-wide">Available on Mac, Watch &amp; iPhone</span>
+          <span className="text-sm text-text-secondary tracking-wide">{t('hero.badge')}</span>
         </div>
 
-        {/* Headline */}
         <h1 className="animate-fade-up animate-delay-2 text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.08] mb-6">
-          Control your Mac
+          {t('hero.headline1')}
           <br />
-          <span className="text-accent">from your wrist</span>
+          <span className="text-accent">{t('hero.headline2')}</span>
         </h1>
 
-        {/* Subheadline */}
         <p className="animate-fade-up animate-delay-3 text-lg sm:text-xl text-text-secondary max-w-xl mx-auto mb-10 leading-relaxed">
-          WristVox turns your Apple Watch and iPhone into a Bluetooth remote for your Mac.
-          Dictate, send, clear — one tap away.
+          {t('hero.sub')}
         </p>
 
-        {/* CTA */}
         <div className="animate-fade-up animate-delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={DOWNLOAD_URL}
             className="group inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-semibold rounded-2xl transition-all duration-300 glow-accent hover:scale-[1.02]"
           >
             <DownloadIcon />
-            Download for Mac
+            {t('hero.download')}
           </a>
           <a
             href={APP_STORE_URL}
@@ -44,13 +39,12 @@ export default function Hero() {
             rel="noopener noreferrer"
           >
             <AppStoreIcon />
-            Watch &amp; iPhone
+            {t('hero.appstore')}
           </a>
         </div>
-        <span className="animate-fade-up animate-delay-4 inline-block mt-4 text-sm text-text-muted">macOS 14.6+ · iOS 18+ · watchOS 11.2+</span>
+        <span className="animate-fade-up animate-delay-4 inline-block mt-4 text-sm text-text-muted">{t('hero.req')}</span>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-up animate-delay-6">
         <div className="w-6 h-10 rounded-full border-2 border-border flex justify-center pt-2">
           <div className="w-1 h-2.5 rounded-full bg-text-muted animate-bounce" />

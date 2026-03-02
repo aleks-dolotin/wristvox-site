@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { t } from '../i18n'
 
 const phrases = [
   'Schedule meeting at 9',
@@ -39,7 +40,6 @@ export default function HowItWorks() {
     return () => clearInterval(interval)
   }, [])
 
-  // Add new phrase each time Mac phase activates
   useEffect(() => {
     if (phase === 2) {
       const newPhrase = {
@@ -48,10 +48,7 @@ export default function HowItWorks() {
       }
       phraseIdx.current++
       nextId.current++
-
       setVisiblePhrases((prev) => [...prev, newPhrase])
-
-      // Remove old phrases after animation (keep last 4)
       setTimeout(() => {
         setVisiblePhrases((prev) => prev.slice(-4))
       }, 600)
@@ -63,16 +60,14 @@ export default function HowItWorks() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            How it works
+            {t('how.title')}
           </h2>
           <p className="text-text-secondary text-lg max-w-md mx-auto">
-            Tap on your Watch or iPhone — your Mac does the rest.
+            {t('how.sub')}
           </p>
         </div>
 
-        {/* Animation */}
         <div className="relative flex items-center justify-center gap-6 sm:gap-12 py-8">
-
           {/* Apple Watch */}
           <div className="flex flex-col items-center gap-3 shrink-0">
             <div
@@ -101,11 +96,8 @@ export default function HowItWorks() {
               </div>
               <div className="absolute -right-1 top-6 w-1.5 h-4 rounded-full bg-border" />
             </div>
-            <span
-              className="text-sm font-medium transition-colors duration-500"
-              style={{ color: phase === 0 ? '#6C5CE7' : '#5A5A6E' }}
-            >
-              Tap
+            <span className="text-sm font-medium transition-colors duration-500" style={{ color: phase === 0 ? '#6C5CE7' : '#5A5A6E' }}>
+              {t('how.watch')}
             </span>
           </div>
 
@@ -125,13 +117,11 @@ export default function HowItWorks() {
                 }}
               />
             ))}
-            {/* No label needed — dots animation speaks for itself */}
           </div>
 
           {/* MacBook */}
           <div className="flex flex-col items-center gap-3 shrink-0">
             <div className="relative">
-              {/* Screen bezel */}
               <div
                 className="w-36 h-24 sm:w-52 sm:h-32 rounded-t-xl border-2 transition-all duration-500 relative"
                 style={{
@@ -139,22 +129,12 @@ export default function HowItWorks() {
                   boxShadow: phase === 2 ? '0 0 30px rgba(108, 92, 231, 0.4), 0 0 60px rgba(108, 92, 231, 0.15)' : 'none',
                 }}
               >
-                {/* Screen inner */}
                 <div className="absolute inset-[6px] rounded-md bg-surface overflow-hidden">
-                  {/* Chat-like message list */}
                   <div className="absolute inset-0 flex flex-col justify-end p-2 sm:p-3 gap-1.5">
                     {visiblePhrases.map((phrase, idx) => {
                       const isLatest = idx === visiblePhrases.length - 1
                       return (
-                        <div
-                          key={phrase.id}
-                          className="chat-msg"
-                          style={{
-                            opacity: isLatest ? 1 : 0.3,
-                            transform: isLatest ? 'translateY(0)' : 'translateY(0)',
-                            animation: isLatest ? 'slideUp 0.4s ease-out' : undefined,
-                          }}
-                        >
+                        <div key={phrase.id} style={{ opacity: isLatest ? 1 : 0.3, animation: isLatest ? 'slideUp 0.4s ease-out' : undefined }}>
                           <span className="inline-block px-2 py-1 rounded-lg bg-accent/15 text-[9px] sm:text-xs text-white font-mono whitespace-nowrap">
                             {phrase.text}
                           </span>
@@ -164,33 +144,22 @@ export default function HowItWorks() {
                   </div>
                 </div>
               </div>
-              {/* Keyboard base — same width as screen */}
               <div
                 className="w-36 h-1.5 sm:w-52 sm:h-2 rounded-b-lg border-x-2 border-b-2 transition-colors duration-500"
                 style={{ borderColor: phase === 2 ? '#6C5CE7' : '#222236' }}
               />
             </div>
-            <span
-              className="text-sm font-medium transition-colors duration-500"
-              style={{ color: phase === 2 ? '#6C5CE7' : '#5A5A6E' }}
-            >
-              Done
+            <span className="text-sm font-medium transition-colors duration-500" style={{ color: phase === 2 ? '#6C5CE7' : '#5A5A6E' }}>
+              {t('how.mac')}
             </span>
           </div>
         </div>
-
       </div>
 
       <style>{`
         @keyframes slideUp {
-          from {
-            opacity: 0;
-            transform: translateY(12px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </section>
