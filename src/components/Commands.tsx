@@ -12,6 +12,7 @@ const moreCommandKeys = [
   { key: 'cmd.browser', icon: '🌍' },
   { key: 'cmd.scroll', icon: '↕️' },
   { key: 'cmd.mouse', icon: '🖱️' },
+  { key: 'cmd.rightclick', icon: '🖱️' },
 ]
 
 export default function Commands() {
@@ -29,10 +30,11 @@ export default function Commands() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <CommandCard name={t('cmd.dictate')} desc={t('cmd.dictate.desc')} shortcut="Fn × 2" icon={<MicIcon />} />
           <CommandCard name={t('cmd.send')} desc={t('cmd.send.desc')} shortcut="↵ Return" icon={<SendIcon />} />
           <CommandCard name={t('cmd.clear')} desc={t('cmd.clear.desc')} shortcut="⌘A + ⌫" icon={<ClearIcon />} />
+          <CommandCard name={t('cmd.touchpad')} desc={t('cmd.touchpad.desc')} shortcut="iPhone" icon={<TouchpadIcon />} />
         </div>
 
         <div className="text-center mb-6">
@@ -89,6 +91,15 @@ function ClearIcon() {
   return (
     <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
+    </svg>
+  )
+}
+
+function TouchpadIcon() {
+  return (
+    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11l-3-3m0 0l-3 3m3-3v8" />
     </svg>
   )
 }

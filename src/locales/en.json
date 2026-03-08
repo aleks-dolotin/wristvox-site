@@ -13,7 +13,7 @@
   "how.mac": "Done",
 
   "cmd.title": "Keyboard, mouse, and more",
-  "cmd.sub": "17 commands from your wrist — keystrokes, punctuation, scroll, and even mouse control. Every command is a single byte over Bluetooth. Instant. Reliable.",
+  "cmd.sub": "20 commands from your wrist — keystrokes, punctuation, scroll, touchpad, and mouse control. All commands travel over Bluetooth Low Energy — just a few bytes each. Instant. Reliable.",
   "cmd.dictate": "Dictate",
   "cmd.dictate.desc": "Start and stop voice dictation",
   "cmd.send": "Send",
@@ -32,6 +32,9 @@
   "cmd.browser": "Open Browser",
   "cmd.scroll": "Scroll & Pan",
   "cmd.mouse": "Mouse Control",
+  "cmd.touchpad": "Touchpad",
+  "cmd.touchpad.desc": "Full-screen touchpad on your iPhone — move, scroll, and click",
+  "cmd.rightclick": "Right Click",
 
   "privacy.title": "Your data stays yours",
   "privacy.sub": "Just a direct Bluetooth connection between your Watch and your Mac. Nothing leaves your devices. Ever.",
