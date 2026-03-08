@@ -9,20 +9,23 @@
             <description><![CDATA[
                 <h2>What's New in 1.1.0</h2>
                 <ul>
-                    <li><b>Escape button</b> — when not dictating, the bottom-left button now sends Escape key (stop Claude generation, close dialogs, cancel actions)</li>
-                    <li>When dictating, the same slot shows Stop as before — safely stops dictation without toggling</li>
-                    <li>New BLE command: Escape (0x1F)</li>
-                    <li>Fixed: Stop command correctly uses single Fn press — never accidentally starts dictation</li>
-                </ul>
+<li>iPhone: Full-screen Touchpad mode — move the cursor and scroll with multi-touch gestures, just like a laptop trackpad</li>
+<li>iPhone: New D-Pad layout matching Apple Watch — orb, segments, and mode button for a unified experience</li>
+<li>iPhone: Right Click support — long press or dedicated button for context menus</li>
+<li>iPhone & Watch: Contextual Escape button — sends Escape when idle (stop Claude, close dialogs), switches to Stop during dictation</li>
+<li>iPhone & Watch: Punctuation buttons — quickly insert comma, period, exclamation mark, and question mark</li>
+<li>New BLE commands: Touchpad Move, Touchpad Scroll (multi-byte for smooth input), Right Click, Escape</li>
+<li>Improved: Stop command now uses single Fn press — never accidentally starts dictation</li>
+</ul>
             ]]></description>
-            <pubDate>Fri, 06 Mar 2026 16:23:38 +0000</pubDate>
+            <pubDate>Sun, 08 Mar 2026 02:50:56 +0000</pubDate>
             <enclosure
                 url="https://github.com/aleks-dolotin/wristvox-releases/releases/download/v1.1.0/WristVox-Mac-1.1.0.dmg"
-                sparkle:version="6"
+                sparkle:version="7"
                 sparkle:shortVersionString="1.1.0"
-                length="5059433"
+                length="5061255"
                 type="application/octet-stream"
-                sparkle:edSignature="CfCtYAJMNPWSzIb1UDY4mvZmo6KSjInkYAnK/Yo6VCPXd9nkOvngzDQyVD6R3ABTeacUb3c/4rGUSCeD+fBEAA=="
+                sparkle:edSignature="ioGDp9sQmH3YGV+rprhiLkmBusU0wPUP+jyUQukrGbB59oPkpdzitJ24pjy15C35TurJGSmbreZb3AVN6ZMuAg=="
             />
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
         </item>
